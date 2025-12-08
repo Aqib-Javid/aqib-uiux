@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun, ArrowRight } from 'lucide-react';
+import { Moon, Sun, ArrowRight, Mail, Linkedin, Download } from 'lucide-react';
 
 interface WorkItem {
   category: string;
@@ -7,12 +7,14 @@ interface WorkItem {
   description: string;
   image: string;
   link: string;
+  country: string;
 }
 
 interface Experience {
   company: string;
   title: string;
   period: string;
+  description: string;
   website?: string;
 }
 
@@ -22,7 +24,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'work', 'about'];
+      const sections = ['home', 'work', 'about', 'experience'];
       const scrollPosition = window.scrollY + 150;
 
       for (const section of sections) {
@@ -43,31 +45,67 @@ function App() {
 
   const works: WorkItem[] = [
     {
-      category: 'Mobile App Design',
-      title: 'E-Commerce Mobile App',
-      description: 'Redesigned mobile shopping experience with intuitive checkout and personalization.',
-      image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800',
+      category: 'SaaS & Startup',
+      title: 'HairCut Recommendation',
+      description: 'An AI-powered hair styling recommendation app that helps users find the perfect haircut based on their face shape and preferences.',
+      image: 'https://framerusercontent.com/images/BMw5YPVWUO3k9pECf8lPzg9N52k.png?width=1280&height=960',
+      country: 'Taiwan',
       link: '#'
     },
     {
-      category: 'Design System',
-      title: 'Component Library',
-      description: 'Built comprehensive design system with 100+ reusable components and documentation.',
-      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
+      category: 'School Management',
+      title: 'Maktab',
+      description: 'Comprehensive school management system designed to streamline administrative tasks and improve student-teacher communication.',
+      image: 'https://framerusercontent.com/images/lS2JBP2RGiWlbMACBoqI59mvtI.png?width=1280&height=960',
+      country: 'Pakistan',
       link: '#'
     },
     {
-      category: 'Web Design',
-      title: 'SaaS Dashboard',
-      description: 'Created accessible and intuitive dashboard for data visualization and analytics.',
-      image: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=800',
+      category: 'Education Startup',
+      title: 'Sanialarm Landing Page',
+      description: 'Modern landing page for an education startup focused on online learning with engaging visuals and conversion optimization.',
+      image: 'https://framerusercontent.com/images/21jfi5u7uXEbUBB1f47nLWK6h0.png?width=1280&height=960',
+      country: 'Croatia',
       link: '#'
     },
     {
-      category: 'App Design',
-      title: 'Fitness Tracking App',
-      description: 'Designed gamified fitness app that motivates users to achieve their health goals.',
-      image: 'https://images.pexels.com/photos/3962285/pexels-photo-3962285.jpeg?auto=compress&cs=tinysrgb&w=800',
+      category: 'Buy & Sell',
+      title: 'Quick Swapper',
+      description: 'Mobile app connecting buyers and sellers in a peer-to-peer marketplace with intuitive browsing and secure transaction features.',
+      image: 'https://framerusercontent.com/images/E1vS8YOLzfCf7rCXY6fY1Pi6W5o.png?width=1280&height=960',
+      country: 'Pakistan',
+      link: '#'
+    },
+    {
+      category: 'Travel & Booking',
+      title: 'Rapidos Booking App',
+      description: 'Travel booking platform with seamless search, filtering, and booking experience for finding and reserving travel accommodations.',
+      image: 'https://framerusercontent.com/images/WXsO0e0BXvxxhfhB9DIh9UiZAc.png?width=1280&height=960',
+      country: 'USA',
+      link: '#'
+    },
+    {
+      category: 'Social Media',
+      title: 'MATE Social App',
+      description: 'Social networking platform designed to connect like-minded individuals through shared interests and real-time interactions.',
+      image: 'https://framerusercontent.com/images/17qHrfHBEMeGT3yf5rr2Dys07I.png?width=1280&height=960',
+      country: 'USA',
+      link: '#'
+    },
+    {
+      category: 'Health & Fitness',
+      title: 'Diet Achiever',
+      description: 'Gamified fitness and diet tracking app that motivates users to achieve their health goals through engaging challenges and rewards.',
+      image: 'https://framerusercontent.com/images/CmD8B011kEkOSFTzmAuDJkEGmfA.png?width=1280&height=960',
+      country: 'USA',
+      link: '#'
+    },
+    {
+      category: 'AI Technology',
+      title: 'Donna 24/7 AI Receptionist',
+      description: 'AI-powered virtual receptionist designed to handle customer inquiries, appointment scheduling, and support interactions 24/7.',
+      image: 'https://framerusercontent.com/images/KX5sHXOoo12HjwkGFDsPXUoekIQ.png?width=1280&height=960',
+      country: 'Canada',
       link: '#'
     }
   ];
@@ -77,25 +115,26 @@ function App() {
       company: 'Algorithm',
       title: 'Sr Product Designer',
       period: '2025 - Present',
-      website: '#'
+      description: 'Leading end-to-end product design (UX/UI) from research to high-fidelity prototypes. Collaborating with PMs, engineers, and stakeholders to align design with business goals.'
     },
     {
-      company: 'Freelance',
-      title: 'Sr Product Designer',
-      period: '2024 - Present',
-      website: '#'
+      company: 'Fiverr & Upwork',
+      title: 'Sr Product Designer & Framer',
+      period: 'Aug 2021 - Present',
+      description: 'Leading the full design process from client discovery to delivery. Translating requirements into user journeys, wireframes, and interactive prototypes.'
     },
     {
       company: 'Itecexpert',
-      title: 'Sr Product Designer',
-      period: '2022 - 2024',
-      website: '#'
+      title: 'UI/UX Designer',
+      period: 'Oct 2022 - Sep 2024',
+      description: 'Engaging clients to define objectives, translating requirements into user-centric solutions, and collaborating with cross-functional teams.'
     }
   ];
 
   const navLinks = [
     { name: 'Work', id: 'work', href: '#work' },
-    { name: 'About', id: 'about', href: '#about' }
+    { name: 'About', id: 'about', href: '#about' },
+    { name: 'Experience', id: 'experience', href: '#experience' }
   ];
 
   return (
@@ -168,7 +207,7 @@ function App() {
               Projects where I led design from concept to implementation
             </p>
 
-            <div className="grid gap-12">
+            <div className="grid md:grid-cols-2 gap-12">
               {works.map((work, idx) => (
                 <div key={idx} className="group">
                   <div className="relative overflow-hidden rounded-xl mb-6 bg-gray-100 dark:bg-gray-900 aspect-video">
@@ -185,10 +224,13 @@ function App() {
                       <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2 uppercase tracking-wide">
                         {work.category}
                       </p>
-                      <h3 className="text-2xl md:text-3xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         {work.title}
                       </h3>
                     </div>
+                    <span className="text-xs font-light text-gray-500 dark:text-gray-500 whitespace-nowrap ml-2">
+                      {work.country}
+                    </span>
                   </div>
 
                   <p className="text-gray-600 dark:text-gray-400 mb-6 font-light max-w-2xl">
@@ -218,42 +260,67 @@ function App() {
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 font-light leading-relaxed">
                   I'm a product designer with 5+ years of experience creating user-centered digital solutions. My passion lies in solving complex design problems and building scalable design systems that empower teams.
                 </p>
-                <p className="text-lg text-gray-700 dark:text-gray-300 font-light leading-relaxed">
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 font-light leading-relaxed">
                   I believe great design starts with understanding user needs and solving real problems. Whether it's designing intuitive interfaces for mobile apps, building comprehensive design systems, or optimizing user flows, I focus on creating experiences that are both beautiful and functional.
+                </p>
+                <p className="text-lg text-gray-700 dark:text-gray-300 font-light leading-relaxed">
+                  With expertise in end-to-end design—from research to execution—I bridge business goals with seamless interactions, ensuring every pixel serves a purpose.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide mb-8">My experience</h3>
-                <div className="space-y-8">
-                  {experiences.map((exp, idx) => (
-                    <div key={idx}>
-                      <a
-                        href={exp.website}
-                        className="text-lg font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                      >
+                <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide mb-8">Skills & Tools</h3>
+                <div className="space-y-6">
+                  <div>
+                    <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Design Tools</p>
+                    <div className="flex flex-wrap gap-2">
+                      {['Figma', 'Adobe XD', 'Sketch', 'Framer', 'InVision'].map(tool => (
+                        <span key={tool} className="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded text-gray-700 dark:text-gray-300">
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Core Competencies</p>
+                    <div className="flex flex-wrap gap-2">
+                      {['UX/UI Design', 'Design Systems', 'User Research', 'Prototyping', 'Accessibility'].map(comp => (
+                        <span key={comp} className="px-3 py-1 text-xs bg-gray-200 dark:bg-gray-800 rounded text-gray-700 dark:text-gray-300">
+                          {comp}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Experience Section */}
+        <section id="experience" className="py-32 px-6 lg:px-8 border-t border-gray-200 dark:border-gray-800">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12">My experience</h2>
+
+            <div className="space-y-12">
+              {experiences.map((exp, idx) => (
+                <div key={idx} className="pb-12 border-b border-gray-200 dark:border-gray-800 last:border-0">
+                  <div className="flex justify-between items-start mb-4">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
+                      <a href={exp.website || '#'} className="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline">
                         {exp.company}
                       </a>
-                      <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">
-                        {exp.title}
-                      </p>
-                      <p className="text-sm text-gray-500 dark:text-gray-500 font-light">
-                        {exp.period}
-                      </p>
                     </div>
-                  ))}
+                    <span className="text-sm font-light text-gray-500 dark:text-gray-500 whitespace-nowrap ml-4">
+                      {exp.period}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed max-w-3xl">
+                    {exp.description}
+                  </p>
                 </div>
-
-                <a
-                  href="https://drive.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-12 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-medium hover:gap-3 transition-all"
-                >
-                  Download resume
-                  <ArrowRight size={18} />
-                </a>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -262,32 +329,58 @@ function App() {
         <section className="py-32 px-6 lg:px-8 border-t border-gray-200 dark:border-gray-800">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's work together.</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 font-light max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 font-light max-w-2xl mx-auto">
               I'm always interested in discussing new design challenges and collaboration opportunities.
             </p>
 
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 flex-wrap">
               <a
                 href="mailto:aqib.javid990@gmail.com"
-                className="px-8 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-medium hover:shadow-lg transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-50 rounded-lg font-medium hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all"
               >
-                Email me
+                <Mail size={18} />
+                Email
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/aqib-javid"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-50 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-50 rounded-lg font-medium hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all"
               >
+                <Linkedin size={18} />
                 LinkedIn
+              </a>
+              <a
+                href="https://dribbble.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-50 rounded-lg font-medium hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.628 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                Dribbble
               </a>
               <a
                 href="https://behance.net"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-50 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-50 rounded-lg font-medium hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all"
               >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M7 10h3v2H7v-2zm7-2h3v4h-3v-4zm0 6h3v2h-3v-2z"/>
+                  <path d="M23 8v12c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2h18c1.1 0 2 .9 2 2zm-2 0H3v12h18V8z"/>
+                </svg>
                 Behance
+              </a>
+              <a
+                href="https://drive.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-medium hover:shadow-lg transition-all"
+              >
+                <Download size={18} />
+                Resume
               </a>
             </div>
           </div>
