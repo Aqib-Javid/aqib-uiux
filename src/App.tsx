@@ -50,7 +50,7 @@ function App() {
       description: 'An AI-powered hair styling recommendation app that helps users find the perfect haircut based on their face shape and preferences.',
       image: 'https://framerusercontent.com/images/BMw5YPVWUO3k9pECf8lPzg9N52k.png?width=1280&height=960',
       country: 'Taiwan',
-      link: '#'
+      link: 'https://www.figma.com/design/XaCfE8zMvk0ZhP21eeqeUu/HairstyleDiscovery-Web-App?m=auto&t=hLvRRi5Y9U0pEulv-6'
     },
     {
       category: 'School Management',
@@ -58,7 +58,7 @@ function App() {
       description: 'Comprehensive school management system designed to streamline administrative tasks and improve student-teacher communication.',
       image: 'https://framerusercontent.com/images/lS2JBP2RGiWlbMACBoqI59mvtI.png?width=1280&height=960',
       country: 'Pakistan',
-      link: '#'
+      link: 'https://usemaktab.com'
     },
     {
       category: 'Education Startup',
@@ -66,7 +66,7 @@ function App() {
       description: 'Modern landing page for an education startup focused on online learning with engaging visuals and conversion optimization.',
       image: 'https://framerusercontent.com/images/21jfi5u7uXEbUBB1f47nLWK6h0.png?width=1280&height=960',
       country: 'Croatia',
-      link: '#'
+      link: 'https://sanialarm.de'
     },
     {
       category: 'Buy & Sell',
@@ -74,7 +74,7 @@ function App() {
       description: 'Mobile app connecting buyers and sellers in a peer-to-peer marketplace with intuitive browsing and secure transaction features.',
       image: 'https://framerusercontent.com/images/E1vS8YOLzfCf7rCXY6fY1Pi6W5o.png?width=1280&height=960',
       country: 'Pakistan',
-      link: '#'
+      link: 'https://play.google.com/store/apps/details?id=com.noman.quickSwapper&hl=en'
     },
     {
       category: 'Travel & Booking',
@@ -82,7 +82,7 @@ function App() {
       description: 'Travel booking platform with seamless search, filtering, and booking experience for finding and reserving travel accommodations.',
       image: 'https://framerusercontent.com/images/WXsO0e0BXvxxhfhB9DIh9UiZAc.png?width=1280&height=960',
       country: 'USA',
-      link: '#'
+      link: 'https://www.figma.com/design/9Z6Kx843G4aB1n26bd6e9h/Rapidos-Booking-App--Copy-?node-id=0-1&t=VGp1HCTF9N37wJbz-1'
     },
     {
       category: 'Social Media',
@@ -90,7 +90,7 @@ function App() {
       description: 'Social networking platform designed to connect like-minded individuals through shared interests and real-time interactions.',
       image: 'https://framerusercontent.com/images/17qHrfHBEMeGT3yf5rr2Dys07I.png?width=1280&height=960',
       country: 'USA',
-      link: '#'
+      link: 'https://www.figma.com/design/X0BK7oC8jvwulXot7gAdSc/Social-App-UX-UI-design?node-id=112803-2014&t=5ncT8RwO5bvb6Uaj-1'
     },
     {
       category: 'Health & Fitness',
@@ -98,7 +98,7 @@ function App() {
       description: 'Gamified fitness and diet tracking app that motivates users to achieve their health goals through engaging challenges and rewards.',
       image: 'https://framerusercontent.com/images/CmD8B011kEkOSFTzmAuDJkEGmfA.png?width=1280&height=960',
       country: 'USA',
-      link: '#'
+      link: 'https://dietachiever.com'
     },
     {
       category: 'AI Technology',
@@ -106,7 +106,7 @@ function App() {
       description: 'AI-powered virtual receptionist designed to handle customer inquiries, appointment scheduling, and support interactions 24/7.',
       image: 'https://framerusercontent.com/images/KX5sHXOoo12HjwkGFDsPXUoekIQ.png?width=1280&height=960',
       country: 'Canada',
-      link: '#'
+      link: 'https://donnaio.ai'
     }
   ];
 
@@ -239,6 +239,8 @@ function App() {
 
                   <a
                     href={work.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium hover:gap-3 transition-all"
                   >
                     View case
@@ -308,9 +310,9 @@ function App() {
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
-                      <a href={exp.website || '#'} className="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline">
+                      <p className="text-lg font-medium text-gray-900 dark:text-gray-100">
                         {exp.company}
-                      </a>
+                      </p>
                     </div>
                     <span className="text-sm font-light text-gray-500 dark:text-gray-500 whitespace-nowrap ml-4">
                       {exp.period}
@@ -387,17 +389,63 @@ function App() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-gray-200 dark:border-gray-800 py-8 px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto flex justify-between items-center">
-            <p className="text-sm text-gray-600 dark:text-gray-400 font-light">
-              © 2025 Aqib Javid. All rights reserved.
-            </p>
-            <a
-              href="#home"
-              className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
-            >
-              Back to top
-            </a>
+        <footer className="border-t border-gray-200 dark:border-gray-800 py-12 px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-8 mb-8 pb-8 border-b border-gray-200 dark:border-gray-800">
+              <div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 font-light mb-4">
+                  Let's connect
+                </p>
+                <div className="flex gap-4">
+                  <a
+                    href="https://dribbble.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded transition-colors"
+                    aria-label="Dribbble"
+                  >
+                    <svg className="w-5 h-5 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200" fill="currentColor" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M8.56 2.75c3.77 4.26 6.31 8.5 6.56 12.21"></path>
+                      <path d="M2.75 15.44c4.26 3.77 8.5 6.31 12.21 6.56"></path>
+                      <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"/>
+                    </svg>
+                  </a>
+                  <a
+                    href="https://behance.net"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded transition-colors"
+                    aria-label="Behance"
+                  >
+                    <svg className="w-5 h-5 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7 6c0-.552.448-1 1-1h3c2.21 0 4 1.79 4 4 0 2-1.791 3.639-3.999 3.999H9v2h2c3.31 0 6-2.69 6-6 0-3.31-2.69-6-6-6H8c-.552 0-1 .448-1 1v6z"/>
+                      <circle cx="14" cy="15" r="2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <a
+                href="https://drive.google.com/file/d/1lqmkKM-55OerkPbyQ6ZvzQcdW0FcKeZq/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-medium hover:shadow-lg transition-all"
+              >
+                <Download size={18} />
+                Download Resume
+              </a>
+            </div>
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+              <p className="text-sm text-gray-600 dark:text-gray-400 font-light">
+                © 2025 Aqib Javid. All rights reserved.
+              </p>
+              <a
+                href="#home"
+                className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 mt-4 md:mt-0"
+              >
+                Back to top
+              </a>
+            </div>
           </div>
         </footer>
       </div>
